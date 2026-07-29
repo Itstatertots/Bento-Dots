@@ -1,0 +1,98 @@
+#!/usr/bin/env sh
+
+# ============================================
+# SKHD CONFIG
+# ============================================
+
+# --- Dummy Binds (disable defaults) ---
+cmd - q :
+cmd - w : 
+
+
+# ============================================
+# APP MANAGEMENT
+# ============================================
+
+# Kill current app
+alt - q : ~/.config/skhd/kill_current_app.sh
+
+# Force kill current app
+alt + shift - q : ~/.config/skhd/force_kill_current_app.sh
+
+# Restart Vivaldi
+alt - r : killall Vivaldi & open -a Vivaldi
+
+# App shortcuts
+alt - t : pgrep -x ghostty > /dev/null && osascript -e 'tell application "System Events" to tell process "Ghostty" to click menu item "New Window" of menu 1 of menu bar item "File" of menu bar 1' || /Applications/Ghostty.app/Contents/MacOS/ghostty &
+alt - e : osascript -e 'tell application "Finder" to make new Finder window to folder (path to downloads folder)'
+
+
+# ============================================
+# WINDOW MANAGEMENT
+# ============================================
+
+# Toggle float
+alt - w : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Resize windows (rcmd + arrow)
+rcmd - left  : yabai -m window --resize right:-50:0  || yabai -m window --resize left:-50:0
+rcmd - down  : yabai -m window --resize bottom:0:50  || yabai -m window --resize top:0:50
+rcmd - up    : yabai -m window --resize bottom:0:-50 || yabai -m window --resize top:0:-50
+rcmd - right : yabai -m window --resize right:50:0   || yabai -m window --resize left:50:0
+
+# Warp windows (shift + rcmd + arrow)
+shift + rcmd - down  : yabai -m window --warp south
+shift + rcmd - left  : yabai -m window --warp west
+shift + rcmd - up    : yabai -m window --warp north
+shift + rcmd - right : yabai -m window --warp east
+
+# Focus window/display (ralt + arrow)
+ralt - left  : yabai -m window --focus west  || yabai -m display --focus west
+ralt - down  : yabai -m window --focus south || yabai -m display --focus south
+ralt - up    : yabai -m window --focus north || yabai -m display --focus north
+ralt - right : yabai -m window --focus east  || yabai -m display --focus east
+
+
+# ============================================
+# SPACE MANAGEMENT (SIP disabled — now working!)
+# ============================================
+
+# Focus space (lalt + number)
+lalt - 1 : yabai -m space --focus 1
+lalt - 2 : yabai -m space --focus 2
+lalt - 3 : yabai -m space --focus 3
+lalt - 4 : yabai -m space --focus 4
+lalt - 5 : yabai -m space --focus 5
+lalt - 6 : yabai -m space --focus 6
+lalt - 7 : yabai -m space --focus 7
+
+# Move window to space (shift + lalt + number)
+shift + lalt - 1 : yabai -m window --space 1; yabai -m space --focus 1
+shift + lalt - 2 : yabai -m window --space 2; yabai -m space --focus 2
+shift + lalt - 3 : yabai -m window --space 3; yabai -m space --focus 3
+shift + lalt - 4 : yabai -m window --space 4; yabai -m space --focus 4
+shift + lalt - 5 : yabai -m window --space 5; yabai -m space --focus 5
+shift + lalt - 6 : yabai -m window --space 6; yabai -m space --focus 6
+shift + lalt - 7 : yabai -m window --space 7; yabai -m space --focus 7
+
+# ============================================
+# SERVICE MANAGEMENT
+# ============================================
+
+ctrl + shift - q : yabai --stop-service
+ctrl + shift - s : yabai --start-service
+ctrl + shift - r : yabai --restart-service
+
+
+
+# Move floating window left
+shift + cmd - h : yabai -m window --warp west
+
+# Move floating window down
+shift + cmd - j : yabai -m window --warp south
+
+# Move floating window up
+shift + cmd - k : yabai -m window --warp north
+
+# Move floating window right
+shift + cmd - l : yabai -m window --warp east

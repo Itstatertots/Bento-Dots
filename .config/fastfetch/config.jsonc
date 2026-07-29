@@ -1,0 +1,115 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+  "logo": {
+    "source": "~/.config/fastfetch/logo.png",
+    "type": "kitty",
+    "height": 18,
+    "padding": {
+      "top": 2,
+      "left": 2,
+      "right": 4
+    }
+  },
+  "display": {
+    "separator": " "
+  },
+  "modules": [
+    {
+      "key": "\u001b[38;5;15m ♡ ∩_∩ ",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;15m  (•֊•) ♡",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;8m╭──U─U──────╮",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m user",
+      "type": "title",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰇅 hname",
+      "type": "title",
+      "format": "\u001b[38;5;250m{2}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰅐 uptime",
+      "type": "uptime",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m├───────────┤",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰟾 distro",
+      "type": "os",
+      "format": "\u001b[38;5;250m{2}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m kernel",
+      "type": "kernel",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰏖 pkgs",
+      "type": "packages",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m term",
+      "type": "terminal",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m shell",
+      "type": "shell",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m├───────────┤",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰍹 screen",
+      "type": "display",
+      "format": "\u001b[38;5;250m{1}x{2} @ {3}Hz"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰍛 cpu",
+      "type": "cpu",
+      "format": "\u001b[38;5;250m{1}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m memory",
+      "type": "memory",
+      "format": "\u001b[38;5;250m{2}"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m󰉉 disk",
+      "type": "disk",
+      "folders": "/",
+      "format": "\u001b[38;5;250m{2}"
+    },
+    {
+      "key": "\u001b[38;5;8m├───────────┤",
+      "type": "custom"
+    },
+    {
+      "key": "\u001b[38;5;8m│           │\u001b[11D\u001b[38;5;15m colors",
+      "type": "colors",
+      "symbol": "circle",
+      "block": {
+        "range": [7, 15]
+      }
+    },
+    {
+      "key": "\u001b[38;5;8m╰───────────╯",
+      "type": "custom"
+    }
+  ]
+}

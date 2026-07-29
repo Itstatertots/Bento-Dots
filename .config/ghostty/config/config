@@ -1,0 +1,9 @@
+font-family = JetBrains Mono Regular Regular
+font-family-bold = JetBrains Mono Regular Bold
+font-family-italic = JetBrains Mono Italic Italic
+font-family-bold-italic = JetBrains Mono Italic Bold Italic
+theme = Kanagawa Dragon
+background-opacity = 0.93
+background-blur = true
+custom-shader-animation = always
+custom-shader = ~/.config/ghostty/shaders/cursor_tail.glsl
