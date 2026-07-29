@@ -27,6 +27,4 @@ My personal macOS dotfiles. A Yabai-managed, terminal-centric environment optimi
 
 - [end-4's illogical-impulse](https://github.com/end-4/dots-hyprland)
 - [Josean Martinez's amaing guide](https://www.josean.com/posts/yabai-setup)
-- [sahaj-b's ghostty shaders](ttps://github.com/sahaj-b/ghostty-cursor-shaders)
-
-
+- [sahaj-b's ghostty shaders](https://github.com/sahaj-b/ghostty-cursor-shaders)
